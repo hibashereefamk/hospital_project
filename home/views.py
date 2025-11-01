@@ -2,13 +2,22 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 def index(request):
-    return HttpResponse('<h1> home world </h1>')
+    person={
+        'name':"john",
+        'age':22,
+        "place":"karaparamba"
+
+    }
+    numbers=[2,3,4,5,6,6]
+    return render(request,'index.html', {'person': person, 'numbers': numbers})
 def about(request):
-    return HttpResponse('about page')
+    return render(request,'about.html')
 def booking(request):
-    return HttpResponse('booking page')
+    return render(request,'booking.html')
 def doctors(request):
-    return HttpResponse('doctors page')
+    return render(request,'doctors.html')
 def contacts(request):
-    return HttpResponse('contacts page')
+    return render(request,'contacts.html')
+def department(request):
+    return render(request,'department.html')
 
