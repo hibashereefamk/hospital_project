@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration </title>
+</head>
+<body >
+    <div class="container d-flex ">
+    <form>
+        <h2 class="text-center">Registeration form</h2>
+        <lable>Name:</lable>
+        <input type="text" placeholder="enter your name" value="user.name">
+        <lable>Phone No:</lable>
+        <input type="text" placeholder="enter your name" value="user.Phone">
+        <lable>Email:</lable>
+        <input type="text" placeholder="enter your name" value="user.Email">
+        <lable>Password:</lable>
+        <input type="text" placeholder="enter your name" value="user.Password">
+        <hr>
+        <button type="submit">submit</button>
+        <p>all ready have an account?<a class="text-dark" href="{% url 'login' %}">Login</a></p>
+        
+        
+    </form>
+    </div>
+</body>
+</html>

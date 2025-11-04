@@ -1,9 +1,23 @@
-
 {% extends "base.html" %}
-{% block title %}
-doctors
-{% endblock%}
+{% load static %}
+{% block title %}Doctors{% endblock %}
 
-{% block content%}
-<h1>doctors page</h1>
-{% endblock%}
+{% block content %}
+<div class="pt-5">
+ <h2 class="text-center"> Our Expert Ophthalmologists</h2>
+  <div class="card-container pt-5">
+    <br>
+    {% for d in doctors %}
+    <div class="card">
+        <img src="{{ d.doc_image.url }}" alt="{{ d.doc_name }}">
+        <div class="card-content">
+          <h3 class="card-title">{{ d.doc_name }}</h3>
+          <p>{{ d.doc_spec }}</p>
+          <p>{{ d.dep_name }} Department</p>
+          <a href="#" class="card-button">View Details</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  </div>
+{% endblock %}
