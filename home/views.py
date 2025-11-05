@@ -1,5 +1,4 @@
 from django.shortcuts import render,redirect
-
 from django.http import HttpResponse
 from .models import Department,Doctors,Booking
 from .form import BookingForm
@@ -8,12 +7,6 @@ from .form import BookingForm
 def index(request):
     
     return render(request,'index.html')
-def register(request):
-    
-    return render(request,'register.html')
-def login(request):
-    
-    return render(request,'login.html')
 
 def about(request):
     return render(request,'about.html')
@@ -29,8 +22,6 @@ def booking(request):
     dict_form={
    'form': form
     }
-    
-
     
     return render(request,'booking.html',dict_form)
 
@@ -48,5 +39,3 @@ def department(request):
         'dept':Department.objects.all()
     }
     return render(request,'department.html',dict_dept)
-
-

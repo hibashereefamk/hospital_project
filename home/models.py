@@ -6,15 +6,6 @@ class Department(models.Model):
 
     def __str__(self):
         return self.dep_name
-class Register(models.Model):
-    u_name=models.CharField(max_length=255)
-    u_phone = models.CharField(max_length=10)
-    u_email =models.EmailField()
-    u_password= models.CharField(max_length=255)
-
-class Login(models.Model):
-    u_email =models.EmailField()
-    u_password= models.CharField(max_length=255)
 
 class Doctors(models.Model):
     doc_name=models.CharField(max_length=255)

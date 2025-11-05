@@ -1,5 +1,5 @@
 from django.contrib import admin
-from.models import Department,Doctors,Booking,Register,Login
+from.models import Department,Doctors,Booking
 
 admin.site.register(Department)
 admin.site.register(Doctors)
@@ -10,5 +10,3 @@ class BookingAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Booking,BookingAdmin)
-admin.site.register(Register)
-admin.site.register(Login)
