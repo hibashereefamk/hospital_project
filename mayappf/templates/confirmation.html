@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% block title %}
+Booking Confirmation
+{% endblock%}
+
+{% block content%}
+
+<div class="container text-center py-5">
+    <h2 class="text-success fw-bold mb-3">✔ Submitted Successfully!</h2>
+    {% if booking %}
+<div class="container text-center"></div>
+<h1>Booking Confirmation</h1>
+<div class="alert alert-info role='alert"> We have your Appointment request,our representative will call you shortly </div>
+        <p><strong>Name:</strong> {{ booking.p_name }}</p>
+        <p><strong>Email:</strong> {{ booking.p_email }}</p>
+        <p><strong>Phone:</strong> {{ booking.p_phone }}</p>
+        <p><strong>Doctor:</strong> {{ booking.doc_name }}</p>
+        <p><strong>Booking Date:</strong> {{ booking.booking_date }}</p> 
+
+    {% endif %}
+
+    {% if contact %}
+        <h4 class="text-primary">Contact Submitted</h4>
+        <h2>We have your request,our representative will call you shortly </h2>
+        <p><strong>Name:</strong> {{ contact.p_name }}</p>
+        <p><strong>Email:</strong> {{ contact.p_email }}</p>
+        <p><strong>Message:</strong> {{ contact.message }}</p>
+    {% endif %}
+
+    {% if feedback %}
+        <h5 class="text-primary">Thank your response</h5>
+        <p><strong>Name:</strong> {{ feedback.P_name }}</p>
+        <p><strong>Email:</strong> {{ feedback.p_email }}</p>
+        <p><strong>Rating:</strong> {{ feedback.rating }}</p>
+        <p><strong>Message:</strong> {{ feedback.message }}</p>
+    {% endif %}
+
+    <a href="{% url 'index' %}" class="btn btn-primary mt-3">Go Home</a>
+   
+</diV>
+{% endblock%}

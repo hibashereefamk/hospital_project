@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+home
+{% endblock%}
+
+{% block content%}
+<div>
+<div>
+  <img src="{% static 'image/new_image.png' %}" alt="new_image" width="800" height="360"  >
+    <img src="{% static 'image/new_image2.png' %}" alt="image1" width="680" height="430" >
+    
+    
+</div>
+<div class="text-center mt-5">
+    
+        <img src="{% static 'image/Hands.webp' %}" alt="Our Vision" width="435">
+    
+    <h3 class="mt-4">Our Vision</h3>
+    
+    <p class="lead w-55 ">
+       Your hospital vision description goes here.<br> Write a few sentences 
+       about your goals, patient care philosophy,<br>and commitment to the community.
+    </p>
+
+  </div>
+ 
+</div>
+{% endblock%}

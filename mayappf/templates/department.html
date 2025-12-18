@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Departments{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center mb-4 text-primary fw-bold">Our Departments</h1>
+  <hr class="w-25 mx-auto mb-5">
+
+  <div class="row justify-content-center">
+    {% for d in dept %}
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm border-0 rounded-4 h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title text-success fw-bold">{{ d.dep_name }}</h5>
+          <p class="card-text text-secondary">{{ d.dep_description }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
